@@ -1,11 +1,11 @@
 import './todolist.css'
 
-function TodoItem() {
+function TodoItem(props) {
 
-    const toDoMessage = "This is the first todo tiem";
+    const {todoMessage} = props;
 
     return (
-        <div className='to-do-item'>{toDoMessage}</div>
+        <div className='to-do-item'>{todoMessage}</div>
     )
 }
 

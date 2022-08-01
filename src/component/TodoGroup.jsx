@@ -1,11 +1,14 @@
 import TodoItem from "./TodoItem";
+import './todolist.css'
 
-function TodoGroup() {
+function TodoGroup(props) {
+
+    const {todoList} = props;
+    const todoGroup = todoList.split(',').map((todoMessage, index) => <TodoItem todoMessage={todoMessage} key={index}></TodoItem> );
+
     return (
-        <div>
-            <TodoItem></TodoItem>
-            <TodoItem></TodoItem>
-            <TodoItem></TodoItem>
+        <div className="to-do-group">
+            {todoGroup}   
         </div>
     )
 }
