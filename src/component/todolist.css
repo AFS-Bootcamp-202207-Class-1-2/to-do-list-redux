@@ -1,0 +1,8 @@
+.to-do-item {
+    width: 500px;
+    height: 20px;
+    border: solid;
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+}
