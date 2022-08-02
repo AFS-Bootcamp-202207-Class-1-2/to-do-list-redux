@@ -1,11 +1,13 @@
 import './todolist.css'
 
+
 function TodoItem(props) {
 
-    const {todoMessage} = props;
+    const {context} = props;
+    
 
     return (
-        <div className='to-do-item'>{todoMessage}</div>
+        <div className='to-do-item' >{context}</div>
     )
 }
 

@@ -5,23 +5,30 @@ const initialState = {
     todos: [
         {
             id: uuidv4(),
-            text: "This is the first todo item",
+            context: "This is the first todo item",
             state: false
         }
     ]
+   
 }
 
 const todoSlice = createSlice({
     name: "todo",
     initialState,
     reducers: {
-        done(){
-
-        },
-        cancel(){
-
+        addTodo(state, action){
+            
+            const newTodo = {
+                id: uuidv4(),
+                context: action.payload,
+                state: false
+            }
+            state.todos = [...state.todos, newTodo]
         }
+        
+        
     }
 })
 
-export default todoSlice.reducers;
+export default todoSlice.reducer;
+export const {addTodo} = todoSlice.actions;

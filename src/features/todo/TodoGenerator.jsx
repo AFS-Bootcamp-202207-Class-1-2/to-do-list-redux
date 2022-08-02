@@ -1,12 +1,14 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux/es/exports";
+import { addTodo } from "./todoSlice";
 
-function TodoGenerator(props) {
+function TodoGenerator() {
 
     const [message, setMessage] = useState(0);
-    const {addTodoItem} = props;
+    const dispatch = useDispatch();
 
     const addToList = () => {
-        addTodoItem(message)
+        dispatch(addTodo(message));
     }
 
     const changeInput = (event) => {
