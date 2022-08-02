@@ -7,3 +7,13 @@
     padding: 10px;
     
 }
+
+.to-do-item div {  
+    display: inline-block;  
+}
+
+
+
+.delete-item{
+    float: right;
+}

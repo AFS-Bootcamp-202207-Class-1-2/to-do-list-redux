@@ -18,7 +18,7 @@ function TodoGenerator() {
     return (
         <div>
             <input type="text" onChange={changeInput}/>
-            <button onClick={addToList}>add</button>
+            <button style={{margin: 10}} onClick={addToList}>add</button>
         </div>
     )
 }
