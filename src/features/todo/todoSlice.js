@@ -6,7 +6,7 @@ const initialState = {
         {
             id: uuidv4(),
             context: "This is the first todo item",
-            state: false
+            done: false
         }
     ]
    
@@ -26,7 +26,7 @@ const todoSlice = createSlice({
             state.todos.push(newTodo);
         },
         changeTodoState(state, action){
-            state.todos[action.payload].state = !state.todos[action.payload].state;
+            state.todos[action.payload].done = !state.todos[action.payload].done;
 
         },
         deleteTodoItem(state, action){

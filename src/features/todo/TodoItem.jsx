@@ -5,32 +5,30 @@ import { changeTodoState, deleteTodoItem } from './todoSlice';
 
 function TodoItem(props) {
 
-    const {context} = props;
-    const {index} = props;
-    const {state} = props;
+    const {todoContext} = props;
+    const {todoIndex} = props;
+    const {todoDone} = props;
     const dispatch = useDispatch();
 
-
     const changetodoState = () => {
-        dispatch(changeTodoState(index));
+        dispatch(changeTodoState(todoIndex));
     }
 
     const deleteTodo = () => {
-        dispatch(deleteTodoItem(index));
+        dispatch(deleteTodoItem(todoIndex));
     }
 
-    
 
-    const content = (state === true ? <del>{context}</del> : context);
+    const content = (todoDone === true ? <del>{todoContext}</del> : todoContext);
 
    
-        return (
-            <div className='to-do-item' >
-                <div className='to-do-content' onClick={changetodoState}>{content} </div>
-                <div className='delete-item'><button onClick={deleteTodo}>x</button></div>
-            </div>
-            
-        )
+    return (
+        <div className='to-do-item' >
+            <div className='to-do-content' onClick={changetodoState}>{content} </div>
+            <div className='delete-item'><button onClick={deleteTodo}>x</button></div>
+        </div>
+        
+    )
     
     
 }

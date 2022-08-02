@@ -2,8 +2,7 @@ import TodoGenerator from "./TodoGenerator";
 import TodoGroup from "./TodoGroup";
 
 function TodoList() {
-
-    
+ 
     return (
         <div>
             <h3>
@@ -12,7 +11,6 @@ function TodoList() {
             <TodoGroup />
             <TodoGenerator />
         </div>
-
     )
 }
 
