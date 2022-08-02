@@ -21,7 +21,7 @@ function TodoItem(props) {
 
     
 
-    const content = (state == true ? <del>{context}</del> : context);
+    const content = (state === true ? <del>{context}</del> : context);
 
    
         return (
