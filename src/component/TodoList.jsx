@@ -4,10 +4,10 @@ import TodoGroup from "./TodoGroup";
 
 function TodoList() {
 
-    const [todoList, setTodoList] = useState("This is the first to do item");
+    const [todoList, setTodoList] = useState(["This is the first to do item"]);
 
     const addTodoItem = (newTodoItem) => {   
-        setTodoList(todoList + ","+newTodoItem)     
+        setTodoList([...todoList,newTodoItem])     
     }
 
     return (

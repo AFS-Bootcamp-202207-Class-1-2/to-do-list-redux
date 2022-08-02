@@ -4,7 +4,7 @@ import './todolist.css'
 function TodoGroup(props) {
 
     const {todoList} = props;
-    const todoGroup = todoList.split(',').map((todoMessage, index) => <TodoItem todoMessage={todoMessage} key={index}></TodoItem> );
+    const todoGroup = todoList.map((todoMessage, index) => <TodoItem todoMessage={todoMessage} key={index}></TodoItem> );
 
     return (
         <div className="to-do-group">
